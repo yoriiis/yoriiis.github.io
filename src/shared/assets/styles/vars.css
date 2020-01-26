@@ -1,0 +1,10 @@
+:root {
+    --containerMaxWidth: 1000px;
+    --black: #141414;
+    --grey: #969696;
+    --font-montserrat: "Montserrat", sans-serif;
+}
+
+@custom-media --media-mobile only screen and (max-width: 749px);
+@custom-media --media-tablet only screen and (min-width: 750px);
+@custom-media --media-desktop only screen and (min-width: 1024px);
