@@ -69,7 +69,6 @@ body {
     .nav {
         &-list {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             flex-flow: wrap;
         }
@@ -110,8 +109,7 @@ body {
 
         .nav {
             &-list {
-                flex-direction: row;
-                flex-flow: nowrap;
+                flex-flow: row nowrap;
             }
 
             &-listItemLink {
