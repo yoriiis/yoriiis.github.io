@@ -32,4 +32,14 @@ jobs:
       script:
         - npm run test:stylelint
         - npm run test:eslint
-
+        - npm run build
+        - cd web
+      deploy:
+        provider: pages
+        cleanup: false
+        token: $GITHUB_TOKEN
+        keep_history: false
+        edge: true
+        commit_message: Deploy Travis CI to %{target_branch} branch
+        on:
+          branch: master

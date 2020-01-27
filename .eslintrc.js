@@ -14,12 +14,12 @@ module.exports = {
 		node: true
 	},
 
-	extends: 'eslint:recommended',
+	extends: 'standard',
 
 	rules: {
 		indent: ['error', 'tab', { ignoredNodes: ['TemplateLiteral > *'] }],
 		'no-tabs': 0,
-		"no-console": 0
+		'no-console': 0
 	},
 
 	globals: {
