@@ -11,7 +11,7 @@ node_js:
 # Safelist
 branches:
   only:
-    - master
+    - develop
 
 cache:
   npm: true
