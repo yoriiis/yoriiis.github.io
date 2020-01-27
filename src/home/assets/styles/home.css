@@ -1,6 +1,28 @@
 @import "@commonVars";
 
+body {
+    background: linear-gradient(-45deg, #4fb70d, #e2bf13, #2985d4);
+    background-size: 400% 400%;
+    animation: gradient 6s ease-in-out infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .home {
+    color: var(--black);
+
     &-section {
         text-align: center;
         height: auto;
@@ -10,11 +32,13 @@
     }
 
     .intro {
+        padding-top: 10px;
+
         &-picture {
             display: block;
             max-width: 150px;
             border-radius: 100%;
-            margin: 0 auto 20px;
+            margin: 0 auto 30px;
         }
 
         .smiley {
@@ -22,7 +46,7 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
 
             span {
                 padding: 0 4px;
@@ -33,7 +57,8 @@
             opacity: 0;
             transition: 450ms ease-out;
             font-style: italic;
-            color: var(--grey);
+            min-width: 120px;
+            display: inline-block;
 
             &.active {
                 opacity: 1;
@@ -46,6 +71,11 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            flex-flow: wrap;
+        }
+
+        &-listItem {
+            width: 50%;
         }
 
         &-listItemIcon {
@@ -64,29 +94,30 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-
-            &:hover {
-                .nav-listItemIcon svg {
-                    fill: var(--grey);
-                }
-
-                span {
-                    color: var(--grey);
-                }
-            }
         }
     }
 }
 
-@media (--media-desktop) {
+@media (--media-tablet) {
     .home {
         &-section {
             height: 100vh;
         }
 
+        .intro {
+            padding-top: 0;
+        }
+
         .nav {
             &-list {
                 flex-direction: row;
+                flex-flow: nowrap;
+            }
+
+            &-listItemLink {
+                &:hover {
+                    opacity: 0.8;
+                }
             }
         }
     }

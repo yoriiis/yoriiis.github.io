@@ -8,8 +8,8 @@
 	"license": "MIT",
 	"author": "Yoriiis aka Joris DANIEL",
 	"scripts": {
-		"build": "rm -rf ./dist/ && webpack --mode=production",
-		"start": "rm -rf ./dist/ && webpack --mode=development",
+		"build": "rm -rf ./web/dist/ && webpack --mode=production",
+		"start": "rm -rf ./web/dist/ && webpack --mode=development",
 		"test:eslint": "eslint -c ./.eslintrc.js .",
 		"test:stylelint": "stylelint './src/**/*.css' --config ./stylelint.config.js"
 	},

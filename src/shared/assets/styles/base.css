@@ -10,21 +10,21 @@ html {
 
 .title {
     font-size: 25px;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 15px;
 }
 
 .subtitle {
     font-size: 18px;
+    font-weight: 600;
     line-height: 25px;
     margin-bottom: 15px;
-    color: var(--grey);
 }
 
 p {
     font-size: 16px;
     line-height: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 @media (--media-desktop) {
@@ -41,7 +41,7 @@ p {
 
     .subtitle {
         font-size: 24px;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 
     p {
