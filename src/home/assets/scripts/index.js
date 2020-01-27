@@ -16,7 +16,6 @@ const packages = [
 	'before-after',
 	'create-youtube-player',
 	'create-videojs-player',
-	'hopx',
 	'validate-target',
 	'lazy-observer',
 	'get-youtube-instance',
