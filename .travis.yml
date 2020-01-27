@@ -38,8 +38,9 @@ jobs:
         provider: pages
         cleanup: false
         token: $GITHUB_TOKEN
+        target_branch: master
         keep_history: false
         edge: true
         commit_message: Deploy Travis CI to %{target_branch} branch
         on:
-          branch: master
+          branch: develop
