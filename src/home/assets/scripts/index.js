@@ -20,7 +20,9 @@ const packages = [
 	'lazy-observer',
 	'get-youtube-instance',
 	'polyfillr',
-	'tracking-manager'
+	'tracking-manager',
+	'pollsr',
+	'step-manager'
 ]
 
 const urlApi = 'https://api.npmjs.org/downloads/range/{{dateStart}}:{{dateEnd}}/{{package}}'
