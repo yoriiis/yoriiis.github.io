@@ -22,7 +22,8 @@ const packages = [
 	'polyfillr',
 	'tracking-manager',
 	'pollsr',
-	'step-manager'
+	'step-manager',
+	'tumblr-builder'
 ]
 
 const urlApi = 'https://api.npmjs.org/downloads/range/{{dateStart}}:{{dateEnd}}/{{package}}'
