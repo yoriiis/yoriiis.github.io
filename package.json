@@ -10,8 +10,83 @@
 	"scripts": {
 		"build": "rm -rf ./web/dist/ && webpack --mode=production",
 		"start": "rm -rf ./web/dist/ && webpack --mode=development",
-		"test:eslint": "eslint -c ./.eslintrc.js .",
-		"test:stylelint": "stylelint './src/**/*.css' --config ./stylelint.config.js"
+		"test:eslint": "eslint . --ignore-pattern web/dist",
+		"test:stylelint": "stylelint './src/**/*.css'"
+	},
+	"babel": {
+		"plugins": [],
+		"presets": [
+			[
+				"@babel/preset-env",
+				{
+					"targets": {
+						"node": "12.14.0"
+					}
+				}
+			]
+		]
+	},
+	"browserslist": [
+		"last 5 version"
+	],
+	"prettier": {
+		"printWidth": 100,
+		"overrides": [
+			{
+				"files": "*.md",
+				"options": {
+					"proseWrap": "preserve",
+					"tabWidth": 2,
+					"useTabs": false
+				}
+			}
+		]
+	},
+	"eslintConfig": {
+		"env": {
+			"browser": true,
+			"es6": true,
+			"node": true
+		},
+		"parser": "babel-eslint",
+		"parserOptions": {
+			"ecmaFeatures": {
+				"impliedStrict": true,
+				"experimentalObjectRestSpread": true
+			},
+			"ecmaVersion": 6,
+			"sourceType": "module"
+		},
+		"extends": "standard",
+		"rules": {
+			"indent": [
+				"error",
+				"tab",
+				{
+					"ignoredNodes": [
+						"TemplateLiteral > *"
+					]
+				}
+			],
+			"no-console": 0,
+			"no-tabs": 0
+		},
+		"globals": {
+			"document": false,
+			"window": false
+		}
+	},
+	"stylelint": {
+		"extends": "stylelint-config-standard",
+		"rules": {
+			"indentation": 4,
+			"unit-whitelist": [
+				"%",
+				"px",
+				"fr",
+				"ms"
+			]
+		}
 	},
 	"dependencies": {},
 	"devDependencies": {

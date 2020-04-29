@@ -1,8 +1,15 @@
 :root {
     --containerMaxWidth: 1000px;
-    --black: #141414;
-    --grey: #969696;
-    --font-montserrat: "Montserrat", sans-serif;
+    --bgColorLight: rgb(255, 255, 255);
+    --bgColorDark: rgb(20, 21, 24);
+    --colorTextDark: #fff;
+    --colorTextLight: #000;
+    --sizeTitle: 40px;
+    --lineHeightTitle: 45px;
+    --sizeSubTitle: 24px;
+    --lineHeightSubTitle: 36px;
+    --sizeText: 18px;
+    --lineHeightText: 28px;
 }
 
 @custom-media --media-mobile only screen and (max-width: 749px);
