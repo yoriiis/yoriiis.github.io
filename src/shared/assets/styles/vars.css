@@ -10,6 +10,8 @@
     --lineHeightSubTitle: 36px;
     --sizeText: 18px;
     --lineHeightText: 28px;
+    --yellow: #ffe300;
+    --fontFamily: "IBM Plex Sans", sans-serif;
 }
 
 @custom-media --media-mobile only screen and (max-width: 749px);

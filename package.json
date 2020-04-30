@@ -39,6 +39,11 @@
 					"tabWidth": 2,
 					"useTabs": false
 				}
+			},{
+				"files": "*.html",
+				"options": {
+					"printWidth": 500
+				}
 			}
 		]
 	},
