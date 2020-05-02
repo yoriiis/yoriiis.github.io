@@ -136,6 +136,8 @@ body {
         svg {
             fill: var(--black);
             transition: fill 250ms ease-out;
+            width: 30px;
+            height: 30px;
         }
     }
 
