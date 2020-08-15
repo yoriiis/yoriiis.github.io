@@ -1,222 +1,230 @@
 @import "@commonVars";
 
 @keyframes rotateHand {
-    0% {
-        transform: rotate(0deg);
-    }
+	0% {
+		transform: rotate(0deg);
+	}
 
-    50% {
-        transform: rotate(10deg);
-    }
+	50% {
+		transform: rotate(10deg);
+	}
 
-    100% {
-        transform: rotate(0deg);
-    }
+	100% {
+		transform: rotate(0deg);
+	}
 }
 
 body {
-    font-family: var(--fontFamily);
-    color: var(--colorText);
+	font-family: var(--fontFamily);
+	color: var(--colorText);
 
-    &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 4px;
-        background-color: var(--yellow);
-        width: 100%;
-    }
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 4px;
+		background-color: var(--yellow);
+		width: 100%;
+	}
 }
 
 #main {
-    padding: 20px;
-    margin: 0 auto;
-    max-width: var(--containerMaxWidth);
+	padding: 10px;
+	margin: 0 auto;
+	max-width: var(--containerMaxWidth);
 }
 
 .title {
-    font-weight: 600;
-    font-size: var(--sizeTitle);
-    line-height: var(--lineHeightTitle);
+	font-weight: 600;
+	font-size: var(--sizeTitle);
+	line-height: var(--lineHeightTitle);
 }
 
 .subtitle {
-    font-weight: 500;
-    font-size: var(--sizeSubTitle);
-    line-height: var(--lineHeightSubTitle);
+	font-weight: 500;
+	font-size: var(--sizeSubTitle);
+	line-height: var(--lineHeightSubTitle);
 }
 
 .text {
-    font-size: var(--sizeText);
-    line-height: var(--lineHeightText);
+	font-size: var(--sizeText);
+	line-height: var(--lineHeightText);
 }
 
 .intro {
-    padding-top: 20px;
-    margin-bottom: 50px;
+	padding-top: 20px;
+	margin-bottom: 50px;
 
-    .title {
-        margin-bottom: 30px;
-    }
+	.title {
+		margin-bottom: 30px;
+	}
 
-    .subtitle {
-        margin-bottom: 25px;
-    }
+	.subtitle {
+		margin-bottom: 25px;
+	}
 
-    .text {
-        margin-bottom: 20px;
-    }
+	.text {
+		margin-bottom: 20px;
+	}
 
-    &-hand {
-        display: inline-block;
-        position: relative;
-        transform: rotate(0deg);
-        animation-name: rotateHand;
-        animation-iteration-count: 3;
-        animation-duration: 1s;
-        animation-fill-mode: both;
-    }
+	&-hand {
+		display: inline-block;
+		position: relative;
+		transform: rotate(0deg);
+		animation-name: rotateHand;
+		animation-iteration-count: 3;
+		animation-duration: 1s;
+		animation-fill-mode: both;
+	}
 }
 
 .latestRepos {
-    margin-bottom: 50px;
+	margin-bottom: 50px;
 
-    .title {
-        margin-bottom: 30px;
-    }
+	.title {
+		margin-bottom: 30px;
+	}
 
-    .subtitle {
-        margin-bottom: 12px;
-    }
+	.subtitle {
+		margin-bottom: 12px;
+	}
 
-    &-list {
-        display: flex;
-        flex-wrap: wrap;
-    }
+	&-list {
+		display: flex;
+		flex-wrap: wrap;
+	}
 
-    &-link {
-        box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+	&-link {
+		box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+		padding: 5px;
+		display: block;
 
-        &:hover {
-            box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3);
-        }
-    }
+		&:hover {
+			box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3);
+		}
+	}
 
-    &-listItem {
-        width: 100%;
-        flex: none;
-        margin-bottom: 25px;
+	&-listItem {
+		width: 100%;
+		flex: none;
+		margin-bottom: 25px;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .nav {
-    .title {
-        margin-bottom: 30px;
-    }
+	.title {
+		margin-bottom: 30px;
+	}
 
-    &-list {
-        display: flex;
-    }
+	&-list {
+		display: flex;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
 
-    &-listItem:first-child {
-        margin-left: -15px;
-    }
+	&-listItem:first-child {
+		margin-left: -15px;
+	}
 
-    &-listItemIcon {
-        display: block;
-        width: 25px;
-        height: 25px;
+	&-listItemIcon {
+		display: block;
+		width: 25px;
+		height: 25px;
 
-        svg {
-            fill: var(--black);
-            transition: fill 250ms ease-out;
-            width: 30px;
-            height: 30px;
-        }
-    }
+		svg {
+			fill: var(--black);
+			transition: fill 250ms ease-out;
+			width: 30px;
+			height: 30px;
+		}
+	}
 
-    &-listItemLink {
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        transition: transform 250ms ease-out;
+	&-listItemLink {
+		padding: 15px;
+		display: flex;
+		flex-direction: column;
+		transition: transform 250ms ease-out;
 
-        &:hover {
-            transform: translateY(-5px);
+		&:hover {
+			transform: translateY(-5px);
 
-            svg {
-                fill: var(--yellow);
-            }
-        }
-    }
+			svg {
+				fill: var(--yellow);
+			}
+		}
+	}
 }
 
 @media (--media-tablet) {
-    .latestRepos-listItem {
-        width: 50%;
+	#main {
+		padding: 20px;
+	}
 
-        &:nth-last-child(-n + 2) {
-            margin-bottom: 0;
-        }
+	.latestRepos-listItem {
+		width: 50%;
 
-        &:nth-child(odd) {
-            padding-right: 10px;
-        }
+		&:nth-last-child(-n + 2) {
+			margin-bottom: 0;
+		}
 
-        &:nth-child(even) {
-            padding-left: 10px;
-        }
-    }
+		&:nth-child(odd) {
+			padding-right: 10px;
+		}
+
+		&:nth-child(even) {
+			padding-left: 10px;
+		}
+	}
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--bgColorDark);
+	body {
+		background-color: var(--bgColorDark);
 
-        &,
-        a {
-            color: var(--colorTextDark);
-        }
-    }
+		&,
+		a {
+			color: var(--colorTextDark);
+		}
+	}
 
-    .nav-listItemIcon svg {
-        fill: var(--colorTextDark);
-    }
+	.nav-listItemIcon svg {
+		fill: var(--colorTextDark);
+	}
 
-    .latestRepos-link {
-        box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
+	.latestRepos-link {
+		box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
 
-        &:hover {
-            box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.3);
-        }
-    }
+		&:hover {
+			box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.3);
+		}
+	}
 }
 
 @media (prefers-color-scheme: light) {
-    body {
-        background-color: var(--bgColorLight);
+	body {
+		background-color: var(--bgColorLight);
 
-        &,
-        a {
-            color: var(--colorTextLight);
-        }
-    }
+		&,
+		a {
+			color: var(--colorTextLight);
+		}
+	}
 
-    .nav-listItemIcon svg {
-        fill: var(--colorTextLight);
-    }
+	.nav-listItemIcon svg {
+		fill: var(--colorTextLight);
+	}
 
-    .latestRepos-link {
-        box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+	.latestRepos-link {
+		box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 
-        &:hover {
-            box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3);
-        }
-    }
+		&:hover {
+			box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3);
+		}
+	}
 }
