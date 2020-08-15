@@ -1,17 +1,17 @@
 :root {
-    --containerMaxWidth: 1000px;
-    --bgColorLight: rgb(255, 255, 255);
-    --bgColorDark: rgb(20, 21, 24);
-    --colorTextDark: #fff;
-    --colorTextLight: #000;
-    --sizeTitle: 40px;
-    --lineHeightTitle: 45px;
-    --sizeSubTitle: 24px;
-    --lineHeightSubTitle: 36px;
-    --sizeText: 18px;
-    --lineHeightText: 28px;
-    --yellow: #ffe300;
-    --fontFamily: "IBM Plex Sans", sans-serif;
+	--containerMaxWidth: 1000px;
+	--bgColorLight: rgb(255, 255, 255);
+	--bgColorDark: rgb(20, 21, 24);
+	--colorTextDark: #fff;
+	--colorTextLight: #000;
+	--sizeTitle: 40px;
+	--lineHeightTitle: 45px;
+	--sizeSubTitle: 24px;
+	--lineHeightSubTitle: 36px;
+	--sizeText: 18px;
+	--lineHeightText: 28px;
+	--yellow: #ffe300;
+	--fontFamily: "IBM Plex Sans", sans-serif;
 }
 
 @custom-media --media-mobile only screen and (max-width: 749px);
